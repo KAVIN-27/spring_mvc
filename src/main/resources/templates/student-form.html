@@ -17,6 +17,25 @@
 
     <br><br>
 
+    Country:
+    <select th:field ="*{country}" >
+        <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}"></option>
+    </select>
+
+    <br><br>
+
+    <input type="radio" th:field="*{programmingLanguage}"
+    th:each="tempLanguage : ${languages}"
+    th:value="${tempLanguage}"
+    th:text="${tempLanguage}"/>
+
+    <br> <br>
+
+    <input type="checkbox" th:field="*{operatingSystem}"
+    th:each="tempSystem : ${systems}"
+    th:value="${tempSystem}"
+    th:text="${tempSystem}"/>
+
     <input type="submit" value="Submit"/>
 </form>
 </body>
